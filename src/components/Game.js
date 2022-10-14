@@ -1,10 +1,14 @@
 import React from "react";
+import Menu from "./Menu";
 
-const Game = ({ rows, columns }) => {
+const start = () => {
+  console.log("start");
+};
+const Game = () => {
   return (
-    <p>
-      rows {rows},columns {columns}
-    </p>
+    <div className="Game">
+      <Menu onClick={start} />
+    </div>
   );
 };
 
