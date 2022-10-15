@@ -1,0 +1,29 @@
+.GameStats {
+  position: relative;
+  /* width: -10rem; */
+  list-style-type: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.GameStats__left {
+  /* right: 0;
+  top: 10vh;
+  text-align: left; */
+}
+
+.GameStats__right {
+  /* right: 10rem;
+  bottom: 0;
+  text-align: left; */
+  /* width: 5rem; */
+  margin-top: -28rem;
+  margin-left: 35rem;
+  height: 100vh;
+}
+
+/* Dimenssion/color of the gamestats display*/
+.GameStats .value {
+  font-size: 2.8rem;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 255, 255, 1);
+}

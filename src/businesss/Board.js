@@ -1,5 +1,5 @@
 import { defaultCell } from "./Cell.js";
-
+import { transferToBoard } from "./Tetrominoes.js";
 export const buildBoard = ({ rows, columns }) => {
   //take the rows and columns, make an array for the rows
   //for each row we make an array that represents the columns

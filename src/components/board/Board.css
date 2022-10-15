@@ -1,10 +1,10 @@
 .Board {
   /* padding: 8em auto; */
-  margin: 8rem auto;
+  margin: 10rem auto;
   display: grid;
   grid-gap: 1rem;
-  width: 20vw;
-  height: 33vw;
+  width: 25rem;
+  height: 40rem;
   background: rgb(32, 0, 64);
   border: 0.5rem solid rgb(32, 0, 64);
   border-radius: 1rem;
