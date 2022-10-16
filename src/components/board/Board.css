@@ -2,7 +2,7 @@
   /* padding: 8em auto; */
   margin: 10rem auto;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 0rem;
   width: 25rem;
   height: 40rem;
   background: rgb(32, 0, 64);

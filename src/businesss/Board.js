@@ -12,3 +12,26 @@ export const buildBoard = ({ rows, columns }) => {
     size: { rows, columns },
   };
 };
+
+export const nextBoard = ({ board, player, restePlayer, addLinesCleared }) => {
+  const { tetromino, position } = player;
+
+  //copy and clear spaces used by pieces that hadnt collided and occupied space permanently
+
+  let rows = board.rows.map((row) =>
+    row.map((cell) => (cell.occupied ? cell : { ...defaultCell }))
+  );
+
+  rows = transferToBoard({
+    className: tetromino.className,
+    isOccupied: player.collided,
+    position,
+    rows,
+    shape: tetromino.shape,
+  });
+
+  return {
+    rows,
+    size: { ...board.size },
+  };
+};

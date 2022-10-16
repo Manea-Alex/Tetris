@@ -1,3 +1,10 @@
 .Tetris {
-  position: relative;
+  /* position: relative; */
+  height: 60rem;
+}
+
+.WRAP {
+  /* position: absolute; */
+  margin-top: -85rem;
+  margin-left: 38rem;
 }

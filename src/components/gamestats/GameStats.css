@@ -16,14 +16,14 @@
   bottom: 0;
   text-align: left; */
   /* width: 5rem; */
-  margin-top: -28rem;
+  margin-top: -22rem;
   margin-left: 35rem;
   height: 100vh;
 }
 
 /* Dimenssion/color of the gamestats display*/
 .GameStats .value {
-  font-size: 2.8rem;
-  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
   color: rgba(255, 255, 255, 1);
 }

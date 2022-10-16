@@ -18,19 +18,24 @@
 } */
 
 .Preview {
-  position: absolute;
-  top: 0;
-  left: 72.2vw;
+  /* position: absolute; */
+  /* top: 0;
+  left: 10rem; */
+  /* margin-bottom: -30rem; */
+  margin: auto;
+  width: 8rem;
+  height: 8rem;
   background: rgba(0, 0, 0, 0.1);
-  border: 10px solid rgba(0, 0, 0, 0);
-  border-radius: 10px;
+  border: 0.5rem solid rgba(0, 0, 0, 0);
+  border-radius: 1rem;
 }
 
 .Preview-board {
+  margin-top: 1rem;
   display: grid;
   grid-gap: 2px;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  width: 11vw;
-  height: 11vw;
+  width: 8rem;
+  height: 8rem;
 }
