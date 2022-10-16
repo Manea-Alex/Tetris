@@ -37,7 +37,7 @@
   border-left: 0.4rem solid rgba(255, 255, 255, 0.1);
   /* border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1); */
   border-right: 0.4rem solid rgba(0, 0, 0, 0.1);
-  margin: 0.05rem;
+  /* margin: 0.05rem; */
 }
 
 .tetromino .Sparkle {
@@ -53,6 +53,16 @@
   background-color: rgba(255, 255, 255, 0.4);
   /* border-radius: 4px 4px; */
   border-radius: 1rem 1rem;
+}
+
+.tetromino.ghost {
+  background-color: transparent;
+  /* border:   0.01rem  solid rgba(255, 255, 255, 0.2); */
+  border-color: solid rgba(255, 4, 4, 0.9);
+}
+
+.tetromino.ghost .Sparkle {
+  opacity: 0;
 }
 
 .tetromino__i {

@@ -1,5 +1,7 @@
 import { defaultCell } from "./Cell.js";
+import { movePlayer } from "./PlayerController";
 import { transferToBoard } from "./Tetrominoes.js";
+
 export const buildBoard = ({ rows, columns }) => {
   //take the rows and columns, make an array for the rows
   //for each row we make an array that represents the columns
@@ -13,6 +15,26 @@ export const buildBoard = ({ rows, columns }) => {
   };
 };
 
+const findDropPosition = ({ board, position, shape }) => {
+  //total numbers of rows for the board - the curr pos
+  let max = board.size.rows - position.row + 1;
+  let row = 0;
+
+  for (let i = 0; i < max; i++) {
+    const delta = { row: i, column: 0 };
+    const result = movePlayer({ delta, position, shape, board });
+    const { collided } = result;
+
+    if (collided) {
+      break;
+    }
+
+    row = position.row + i;
+  }
+
+  return { ...position, row };
+};
+
 export const nextBoard = ({ board, player, resetPlayer, addLinesCleared }) => {
   const { tetromino, position } = player;
 
@@ -22,13 +44,37 @@ export const nextBoard = ({ board, player, resetPlayer, addLinesCleared }) => {
     row.map((cell) => (cell.occupied ? cell : { ...defaultCell }))
   );
 
-  rows = transferToBoard({
-    className: tetromino.className,
-    isOccupied: player.collided,
+  //drop position
+  const dropPosition = findDropPosition({
+    board,
     position,
+    shape: tetromino.shape,
+  });
+
+  //Place the ghost
+  const className = `${tetromino.className} ${
+    player.isFastDropping ? "" : "ghost"
+  }`;
+  rows = transferToBoard({
+    className,
+    isOccupied: player.isFastDropping,
+    position: dropPosition,
     rows,
     shape: tetromino.shape,
   });
+
+  //Place the piece, if its collided mark the board cells as collided
+  if (!player.isFastDropping) {
+    rows = transferToBoard({
+      className: tetromino.className,
+      isOccupied: player.collided,
+      position,
+      rows,
+      shape: tetromino.shape,
+    });
+  }
+
+  //check for cleared lines
 
   //if we collided, reset the player
   if (player.collided || player.isFastDropping) {
