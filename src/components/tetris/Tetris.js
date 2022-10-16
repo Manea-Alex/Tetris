@@ -3,6 +3,7 @@ import "./Tetris.css";
 import Board from "../board/Board";
 import GameStats from "../gamestats/GameStats";
 import Previews from "../previews/Previews";
+import GameController from "../gamecontroller/GameController";
 
 import { useBoard } from "../../hooks/useBoard";
 import { useGameStats } from "../../hooks/useGameStats";
@@ -20,7 +21,7 @@ const Tetris = ({ rows, columns, setGameOver }) => {
     addLinesCleared,
   });
 
-  console.log("Player tetro ", player.tetrominoes);
+  // console.log("Player tetro ", player.tetrominoes);
   return (
     <div className="Tetris">
       <Board board={board} />
@@ -28,6 +29,13 @@ const Tetris = ({ rows, columns, setGameOver }) => {
       <div className="WRAP">
         <Previews tetrominoes={player.tetrominoes} />
       </div>
+      <GameController
+        board={board}
+        gameStats={gameStats}
+        player={player}
+        setGameOver={setGameOver}
+        setPlayer={setPlayer}
+      />
     </div>
   );
 };

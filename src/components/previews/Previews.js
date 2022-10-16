@@ -6,7 +6,7 @@ const Previews = ({ tetrominoes }) => {
   const previewTetrominoes = tetrominoes
     .slice(1 - tetrominoes.length)
     .reverse();
-  console.log("Preview tetrominoes ", previewTetrominoes);
+  // console.log("Preview tetrominoes ", previewTetrominoes);
   return (
     <>
       {previewTetrominoes.map((tetromino, index) => (

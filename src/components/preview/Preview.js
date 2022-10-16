@@ -9,14 +9,14 @@ import BoardCell from "../boardcell/BoardCell.js";
 //the pieces that show up next and are going to be transfered to the board 4 by 4
 const Preview = ({ tetromino, index }) => {
   const { shape, className } = tetromino;
-  console.log("tetromino is ", tetromino);
-  console.log("Class Name is ", tetromino);
-  console.log("Shape is ", shape);
+  // console.log("tetromino is ", tetromino);
+  // console.log("Class Name is ", tetromino);
+  // console.log("Shape is ", shape);
 
   const board = buildBoard({ rows: 4, columns: 4 });
   const style = { top: `${index * 15}vw` };
 
-  console.log("Board is ", board);
+  // console.log("Board is ", board);
   //transfer the tetramino to the board
   board.rows = transferToBoard({
     className,
@@ -26,7 +26,7 @@ const Preview = ({ tetromino, index }) => {
     shape,
   });
 
-  console.log("Board rows ", board.rows);
+  // console.log("Board rows ", board.rows);
 
   //rendering the preview
   //actual board getting rendered line 30

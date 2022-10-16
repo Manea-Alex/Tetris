@@ -27,26 +27,32 @@
 } */
 .BoardCell {
   width: auto;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   position: relative;
 }
 
 .tetromino {
-  border-top: 3px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-  border-right: 3px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 0.2rem solid rgba(255, 255, 255, 0.1); */
+  /* border-top: 1px; */
+  border-left: 0.4rem solid rgba(255, 255, 255, 0.1);
+  /* border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1); */
+  border-right: 0.4rem solid rgba(0, 0, 0, 0.1);
+  margin: 0.05rem;
 }
 
 .tetromino .Sparkle {
   position: absolute;
   z-index: 10;
-  width: 6px;
-  height: 6px;
+  /* width: 6px;
+  height: 6px; */
+  width: 0.4rem;
+  height: 0.4rem;
   left: -2px;
   top: -2px;
+
   background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 4px 4px;
+  /* border-radius: 4px 4px; */
+  border-radius: 1rem 1rem;
 }
 
 .tetromino__i {
