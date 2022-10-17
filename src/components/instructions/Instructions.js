@@ -7,7 +7,6 @@ const Instructions = () => (
     <br></br>← → - Go right or left
     <br></br>↑ - Rotate
     <br></br>↓ - Go down faster
-    <br></br>Space - Fast Drop
     <br></br>Q - Quit
     <br></br>P - Pause
   </div>
