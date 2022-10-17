@@ -6,10 +6,16 @@
   z-index: 100;
 }
 .Button {
+  font-family: "Press Start 2P", cursive;
   padding: 2rem 3rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   border-radius: 1rem;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.5) 0rem 0rem 0rem 0.2rem;
   cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #3e8e41;
+  color: white;
 }

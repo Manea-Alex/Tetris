@@ -1,0 +1,10 @@
+.Instructions {
+  font-family: "Poppins", sans-serif;
+  /* margin-right: 10rem; */
+  height: 18rem;
+  width: 15rem;
+  position: relative;
+  bottom: 15rem;
+  right: -18rem;
+  font-size: 1.2rem;
+}
